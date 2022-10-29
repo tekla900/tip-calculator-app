@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #C5E4E7;
+    font-family: 'Space Mono', monospace;
+}
+
+header {
+    width: 90px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+@media (min-width: 920px) {
+    header {
+        margin-top: 163px;
+    }
+}
+
+main {
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 375px;
+    box-shadow: 0px 32px 43px 0px #4FA6AF33;
+    border-radius: 25px 25px 0px 0px;
+    background-color: white; 
+}
+
+@media (min-width: 920px) {
+    main {
+        margin-top: 87px;
+        width: 920px;
+        border-radius: 25px;
+    }
+}
+
+.main-content {
+    width: 311px; /* tu 327px? */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 920px) {
+    .main-content {
+        width: 920px;
+        margin-top: 45px;
+        flex-direction: row;
+    }
+}
+
+p {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 19px;
+    color: #7F9D9F; 
+}
+
+h4 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+}
+
+input {
+    height: 48px;
+    width: 311px;
+    background: #F3F9FA;
+    border: none;
+    border-radius: 5px;
+    text-align: right;
+    padding: 6px 17px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0px;
+    color: #00474B;
+    outline: none;
+}
+
+
+@media (min-width: 920px) {
+    input {
+        height: 48px;
+        width: 379px;
+    }
+}
+
+input:focus {
+    border: 2px solid #26C2AE
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input {
+    position: relative;  
+}
+
+#bill_input_icon, #person_input_icon {
+    position: absolute;
+    top: 16px;
+    left: 19px;
+}
+
+label {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #5E7A7D;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    height: 48px;
+    border-radius: 5px;
+    background: #00474B; 
+}
+
+button:hover  {
+    background-color: #26C2AE;
+}
+
+.bill, .tip, .people {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.tip {
+    gap: 16px;
+}
+
+.percent { 
+    width: 146.63px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0px;
+    color: white;
+}
+
+@media (min-width: 920px) {
+    .percent  {
+        width: 117px;
+    }
+}
+
+.custom {
+    background: #F3F9FA;
+    color: #547878;
+    padding: 0;
+    padding-right: 15px;
+}
+
+.percents_box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+@media (min-width: 920px) {
+    .percents_box  {
+        gap: 14px;
+    }
+}
+
+.left {
+    margin: 32px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.right {
+    background-color: #00474B;
+    height: 257px;
+    width: 327px;
+    border-radius: 15px;
+}
+
+@media (min-width: 920px) {
+    .right  {
+        height: 417px;
+        width: 413px;
+        margin: 0 auto;
+    }
+    .left {
+        width: 379px;
+        margin-top: 45px;
+    }
+}
+
+.calculate, .btn-ctn {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 281px;
+    margin: 32px auto;
+}
+
+@media (min-width: 920px) {
+    .calculate  {
+        gap: 53px;
+        width: 333px;
+        margin: 56px auto;
+        margin-bottom: 0;
+    }
+
+    .btn-ctn  {
+        margin-top: 0;
+    }
+}
+
+.tip-amount, .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.value {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 47px;
+    text-align: right;
+    letter-spacing: -0.67px;
+    color: #26C2AE;
+}
+
+.reset {
+    width: 281px;
+    background: #26C2AE;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px; 
+    text-align: center;
+    color: #00474B;
+}
+
+.reset:hover {
+    background-color: #9FE8DF;;
+}
+
+@media (min-width: 920px) {
+    .reset {
+        margin-top: 122px;
+    }
+}
+
