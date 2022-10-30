@@ -27,9 +27,10 @@ personInput.addEventListener('input', () => {
 
 function displayTotals() {
     if (tip_percentage && billInput.value && personInput.value) {
-        let tip = billInput.value * tip_percentage / personInput.value;
-        totalAmount.textContent = `$${(Number(billInput.value) + tip)/ personInput.value}`;
-        tipAmount.textContent = `$${tip}`;
+        let tip = (billInput.value * tip_percentage / personInput.value);
+        let total = ((Number(billInput.value) + tip)/ personInput.value).toFixed(2);
+        totalAmount.textContent = `$${total}`;
+        tipAmount.textContent = `$${tip.toFixed(2)}`;
     }
 }
 
