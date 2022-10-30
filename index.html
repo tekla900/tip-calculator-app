@@ -26,7 +26,6 @@
 
         
         <div class="bill">
-          <!-- <h2>Bill</h2> -->
           <label for="bill">Bill</label>
           <div class="input"><img src="./images/icon-dollar.svg" id="bill_input_icon">
             <input type="number" name="bill" id="bill" placeholder="0">
@@ -38,7 +37,7 @@
           <div class="percents_box">
             <button class="percent" type="button" value="5">5%</button>
             <button class="percent" type="button" value="10">10%</button>
-            <button class="percent" type="button" value="15">15%</button>
+            <button class="percent active" type="button" value="15">15%</button>
             <button class="percent" type="button" value="25">25%</button>
             <button class="percent" type="button" value="50">50%</button>
             <input class="percent custom" type="number" placeholder="Custom">
@@ -46,7 +45,10 @@
         </div>
 
         <div class="people">
-          <label for="people">Number of People</label>
+          <div class="label-box">
+            <label for="people">Number of People</label>
+            <span class="error-span">Can't be zero</span>
+          </div>
           <div class="input"><img src="./images/icon-person.svg" id="person_input_icon">
             <input type="number" name="people" id="people" placeholder="0">
           </div>   
@@ -84,7 +86,7 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/tekla900">Tekla Inashvili</a>.
   </div>
 
   <script src="./scripts.js"></script>

@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
+:root {
+    --background: #C5E4E7
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +11,7 @@
 }
 
 body {
-    background-color: #C5E4E7;
+    background-color: var(--background);
     font-family: 'Space Mono', monospace;
 }
 
@@ -95,7 +99,7 @@ input {
 }
 
 input:focus {
-    border: 2px solid #26C2AE
+    border: 2px solid #26C2AE !important;
 }
 
 input::-webkit-outer-spin-button,
@@ -160,6 +164,10 @@ button:disabled, button:disabled:hover {
     .percent  {
         width: 117px;
     }
+}
+
+.active {
+    background-color: #26C2AE;
 }
 
 .custom {
@@ -262,4 +270,20 @@ button:disabled, button:disabled:hover {
         margin-top: 122px;
     }
 }
+
+.label-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.error-span {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    color: #E17457;
+    display: none;
+}
+
 
