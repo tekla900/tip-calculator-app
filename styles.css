@@ -133,6 +133,10 @@ button:hover  {
     background-color: #26C2AE;
 }
 
+button:disabled, button:disabled:hover {
+    background-color: #0D686D;
+}
+
 .bill, .tip, .people {
     display: flex;
     flex-direction: column;

@@ -1,29 +1,42 @@
-console.log('hello new project');
-
 let billInput = document.getElementById('bill');
 let personInput = document.getElementById('people');
 let procents = document.querySelectorAll('button.percent');
-
-let tip_percentage;
+let customTip = document.querySelector('.custom');
 
 let tipAmount = document.getElementById('tip-amount');
 let totalAmount = document.getElementById('total');
 
+let resetBtn = document.querySelector('.reset')
+
+let tip_percentage;
+
+resetBtn.disabled = true;
+// let allInputs = document.querySelectorAll('span.test:not(.asd)');
+let allInputs = document.querySelectorAll("#bill, #people");
+
+allInputs.forEach(element => {
+    element.addEventListener('input', () => displayTotals());
+});
+
 procents.forEach(each => {
     each.addEventListener('click', () => {
-        console.log(each.value);
         tip_percentage = Number(each.value/100);
         displayTotals();
     });
-})
+});
 
-billInput.addEventListener('input', () => {
+customTip.addEventListener('input', () => {
+    tip_percentage = Number(customTip.value/100);
     displayTotals();
 });
 
-personInput.addEventListener('input', () => {
-    displayTotals();
-});
+// billInput.addEventListener('input', () => {
+//     displayTotals();
+// });
+
+// personInput.addEventListener('input', () => {
+//     displayTotals();
+// });
 
 function displayTotals() {
     if (tip_percentage && billInput.value && personInput.value) {
@@ -31,6 +44,9 @@ function displayTotals() {
         let total = ((Number(billInput.value) + tip)/ personInput.value).toFixed(2);
         totalAmount.textContent = `$${total}`;
         tipAmount.textContent = `$${tip.toFixed(2)}`;
-    }
-}
 
+        resetBtn.disabled = false;
+    };  
+};
+
+// displayTotals();
